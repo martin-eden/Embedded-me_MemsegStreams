@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-08-25
+  Last mod.: 2025-08-26
 */
 
 /*
@@ -36,7 +36,7 @@ void MemToStreamTest()
   Input_MemStream.Init(TestDataSeg, me_WorkMemory::Op_GetByte);
   Output_UartStream.Init(me_Uart::Op_PutByte);
 
-  me_Streams::Freetown::CopyTo(&Output_UartStream, &Input_MemStream);
+  me_Streams::CopyStreamTo(&Input_MemStream, &Output_UartStream);
 }
 
 void setup()
