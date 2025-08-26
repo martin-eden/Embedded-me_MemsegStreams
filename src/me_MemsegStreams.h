@@ -1,6 +1,8 @@
-//
+// Wrapping address segments as streams
 
 /*
+  Author: Martin Eden
+  Last mod.: 2025-08-26
 */
 
 #pragma once
@@ -11,6 +13,7 @@
 
 namespace me_MemsegStreams
 {
+  // Address segment as input stream
   class TMemsegInputStream : public me_Streams::TInputStream
   {
     public:
@@ -26,6 +29,7 @@ namespace me_MemsegStreams
       TOperation ReadUnit;
   };
 
+  // Address segment as output stream
   class TMemsegOutputStream : public me_Streams::TOutputStream
   {
     public:
@@ -44,4 +48,5 @@ namespace me_MemsegStreams
 
 /*
   2025-08-25
+  2025-08-26
 */

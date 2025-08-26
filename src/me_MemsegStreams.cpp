@@ -1,18 +1,24 @@
-//
+// Address segments as streams implementation
 
 /*
+  Author: Martin Eden
+  Last mod.: 2025-08-26
 */
 
 #include <me_MemsegStreams.h>
 
 #include <me_BaseTypes.h>
-
 #include <me_MemorySegment.h>
 
 using namespace me_MemsegStreams;
 
-//
+// ( Address segment as input stream
 
+/*
+  Setup
+
+  Requires address segment and read function.
+*/
 TBool TMemsegInputStream::Init(
   me_MemorySegment::TMemorySegment MemSeg,
   TOperation UnitReader
@@ -26,6 +32,9 @@ TBool TMemsegInputStream::Init(
   return true;
 }
 
+/*
+  Read byte
+*/
 TBool TMemsegInputStream::Read(
   TUnit * Unit
 )
@@ -42,8 +51,15 @@ TBool TMemsegInputStream::Read(
   return true;
 }
 
-//
+// )
 
+// ( Address segment as output stream
+
+/*
+  Setup
+
+  Requires segment and write function.
+*/
 TBool TMemsegOutputStream::Init(
   me_MemorySegment::TMemorySegment MemSeg,
   TOperation UnitWriter
@@ -57,6 +73,9 @@ TBool TMemsegOutputStream::Init(
   return true;
 }
 
+/*
+  Write byte
+*/
 TBool TMemsegOutputStream::Write(
   TUnit Unit
 )
@@ -73,7 +92,7 @@ TBool TMemsegOutputStream::Write(
   return true;
 }
 
-//
+// )
 
 /*
   2025-08-25
