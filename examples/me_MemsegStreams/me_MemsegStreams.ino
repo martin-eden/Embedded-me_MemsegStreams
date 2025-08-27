@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-08-26
+  Last mod.: 2025-08-27
 */
 
 /*
@@ -27,7 +27,7 @@
 */
 void MemToStreamTest()
 {
-  me_MemorySegment::TMemorySegment TestDataSeg =
+  TAddressSegment TestDataSeg =
     me_MemorySegment::Freetown::FromAsciiz("TEST DATA\n");
 
   me_MemsegStreams::TMemsegInputStream Input_MemStream;

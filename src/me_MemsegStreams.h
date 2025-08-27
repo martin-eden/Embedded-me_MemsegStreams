@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-08-26
+  Last mod.: 2025-08-27
 */
 
 #pragma once
@@ -18,7 +18,7 @@ namespace me_MemsegStreams
   {
     public:
       TBool Init(
-        me_MemorySegment::TMemorySegment MemSeg,
+        TAddressSegment AddrSeg,
         TOperation UnitReader
       );
 
@@ -34,7 +34,7 @@ namespace me_MemsegStreams
   {
     public:
       TBool Init(
-        me_MemorySegment::TMemorySegment MemSeg,
+        TAddressSegment AddrSeg,
         TOperation UnitWriter
       );
 

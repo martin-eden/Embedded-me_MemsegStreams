@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-08-26
+  Last mod.: 2025-08-27
 */
 
 #include <me_MemsegStreams.h>
@@ -20,11 +20,11 @@ using namespace me_MemsegStreams;
   Requires address segment and read function.
 */
 TBool TMemsegInputStream::Init(
-  me_MemorySegment::TMemorySegment MemSeg,
+  TAddressSegment AddrSeg,
   TOperation UnitReader
 )
 {
-  if (!Rator.Init(MemSeg))
+  if (!Rator.Init(AddrSeg))
     return false;
 
   this->ReadUnit = UnitReader;
@@ -61,11 +61,11 @@ TBool TMemsegInputStream::Read(
   Requires segment and write function.
 */
 TBool TMemsegOutputStream::Init(
-  me_MemorySegment::TMemorySegment MemSeg,
+  TAddressSegment AddrSeg,
   TOperation UnitWriter
 )
 {
-  if (!Rator.Init(MemSeg))
+  if (!Rator.Init(AddrSeg))
     return false;
 
   this->WriteUnit = UnitWriter;
