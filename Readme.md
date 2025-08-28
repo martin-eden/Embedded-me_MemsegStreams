@@ -5,6 +5,10 @@
 Adapter/converter/wrapper of random-access memories (SRAM, Flash,
 EEPROM) to streams interface (UART). Experimental library.
 
+OBSOLETE
+
+Code is moved to `[me_StreamTools]`.
+
 
 ## Code
 
