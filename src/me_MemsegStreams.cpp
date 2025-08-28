@@ -2,13 +2,12 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-08-27
+  Last mod.: 2025-08-28
 */
 
 #include <me_MemsegStreams.h>
 
 #include <me_BaseTypes.h>
-#include <me_MemorySegment.h>
 
 using namespace me_MemsegStreams;
 
@@ -19,7 +18,7 @@ using namespace me_MemsegStreams;
 
   Requires address segment and read function.
 */
-TBool TMemsegInputStream::Init(
+TBool TAddrsegInputStream::Init(
   TAddressSegment AddrSeg,
   TOperation UnitReader
 )
@@ -33,9 +32,9 @@ TBool TMemsegInputStream::Init(
 }
 
 /*
-  Read byte
+  Read byte wrapper
 */
-TBool TMemsegInputStream::Read(
+TBool TAddrsegInputStream::Read(
   TUnit * Unit
 )
 {
@@ -60,7 +59,7 @@ TBool TMemsegInputStream::Read(
 
   Requires segment and write function.
 */
-TBool TMemsegOutputStream::Init(
+TBool TAddrsegOutputStream::Init(
   TAddressSegment AddrSeg,
   TOperation UnitWriter
 )
@@ -74,9 +73,9 @@ TBool TMemsegOutputStream::Init(
 }
 
 /*
-  Write byte
+  Write byte wrapper
 */
-TBool TMemsegOutputStream::Write(
+TBool TAddrsegOutputStream::Write(
   TUnit Unit
 )
 {

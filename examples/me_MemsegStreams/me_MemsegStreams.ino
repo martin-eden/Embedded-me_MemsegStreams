@@ -30,7 +30,7 @@ void MemToStreamTest()
   TAddressSegment TestDataSeg =
     me_MemorySegment::Freetown::FromAsciiz("TEST DATA\n");
 
-  me_MemsegStreams::TMemsegInputStream Input_MemStream;
+  me_MemsegStreams::TAddrsegInputStream Input_MemStream;
   me_Streams::TOutputStream Output_UartStream;
 
   Input_MemStream.Init(TestDataSeg, me_WorkMemory::Op_GetByte);
