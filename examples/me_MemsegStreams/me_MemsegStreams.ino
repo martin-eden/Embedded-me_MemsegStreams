@@ -2,14 +2,14 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-08-27
+  Last mod.: 2025-08-28
 */
 
 /*
   We will send data from memory (RAM) to UART
 
-  We have [me_MemsegStreams] to treat indexable segment as stream.
-  UART is native stream by design.
+  We have [me_MemsegStreams] to treat indexable segment of memory
+  as input stream. Interface of [me_Uart] supports output stream.
 */
 
 #include <me_MemsegStreams.h>
